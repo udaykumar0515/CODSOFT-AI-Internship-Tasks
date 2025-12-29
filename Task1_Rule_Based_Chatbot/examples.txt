@@ -1,0 +1,74 @@
+# Rule-Based Chatbot - Conversation Examples
+
+## Example 1: Greeting Conversation
+User: Hello
+Bot: Hi there! What can I do for you?
+
+User: How are you?
+Bot: I'm doing great, thank you for asking!
+
+User: What is your name?
+Bot: I'm a rule-based chatbot created for the CODSOFT AI internship.
+
+User: bye
+Bot: Goodbye! Have a great day!
+
+## Example 2: Help Request
+User: hi
+Bot: Hello! How can I help you today?
+
+User: what can you do?
+Bot: I can have basic conversations, answer simple questions, and provide information.
+
+User: help me
+Bot: I can help with greetings, basic queries, and general conversation.
+
+User: thanks
+Bot: You're welcome!
+
+## Example 3: Fallback Handling
+User: hello
+Bot: Hey! How are you doing?
+
+User: what is the meaning of life?
+Bot: I'm not sure how to respond to that. Can you try rephrasing?
+
+User: tell me about quantum physics
+Bot: I don't understand. Could you ask something else?
+
+User: bye
+Bot: See you later! Take care!
+
+## Example 4: Mixed Conversation
+User: hey
+Bot: Hello! How can I help you today?
+
+User: how old are you?
+Bot: I'm a program, so I don't have an age in the traditional sense!
+
+User: what time is it?
+Bot: I don't have access to real-time time data. Please check your device's clock.
+
+User: thank you
+Bot: Happy to help!
+
+User: exit
+Bot: Bye! It was nice talking to you!
+
+## Supported Patterns:
+- Greetings: hi, hello, hey, good morning/afternoon/evening
+- Well-being: how are you, how do you do
+- Identity: what is your name, who are you
+- Capabilities: what can you do, help me, capabilities
+- Farewell: bye, goodbye, see you, exit, quit
+- Gratitude: thank you, thanks, thx
+- Weather: weather, temperature
+- Time: time, current time
+- Age: age, how old are you
+
+## Features:
+- Case-insensitive pattern matching
+- Random response selection for variety
+- Fallback responses for unknown inputs
+- Graceful exit handling
+- Error handling for unexpected inputs

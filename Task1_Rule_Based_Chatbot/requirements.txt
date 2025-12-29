@@ -1,0 +1,8 @@
+# Task 1: Rule-Based Chatbot Requirements
+# No external dependencies required - uses only Python standard library
+
+# Python version: 3.7+
+# Standard library modules used:
+# - re (regular expressions)
+# - random
+# - typing
