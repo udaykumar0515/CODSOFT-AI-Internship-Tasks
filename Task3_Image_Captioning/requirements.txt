@@ -1,0 +1,25 @@
+# Task 3: Image Captioning Requirements
+
+# Core deep learning frameworks
+torch>=1.9.0
+torchvision>=0.10.0
+
+# Image processing
+Pillow>=8.0.0
+
+# Numerical computing
+numpy>=1.19.0
+
+# Data visualization (optional, for training)
+matplotlib>=3.3.0
+
+# Progress bars (optional)
+tqdm>=4.60.0
+
+# Jupyter notebook support (optional)
+jupyter>=1.0.0
+ipykernel>=5.5.0
+
+# Additional utilities
+scipy>=1.7.0
+scikit-learn>=0.24.0
