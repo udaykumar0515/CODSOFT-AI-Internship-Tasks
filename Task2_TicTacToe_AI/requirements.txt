@@ -1,0 +1,8 @@
+# Task 2: Tic-Tac-Toe AI Requirements
+# No external dependencies required - uses only Python standard library
+
+# Python version: 3.7+
+# Standard library modules used:
+# - math
+# - typing
+# - sys
