@@ -18,7 +18,7 @@ class RuleBasedChatbot:
             ],
             r'(?i)(what is your name|who are you)': [
                 "I'm a rule-based chatbot created for the CODSOFT AI internship.",
-                "I'm an AI assistant designed to help with basic conversations.",
+                "I'm a simple chatbot created for the CODSOFT AI internship.",
                 "I'm a simple chatbot using pattern matching to respond."
             ],
             r'(?i)(what can you do|help me|capabilities)': [
