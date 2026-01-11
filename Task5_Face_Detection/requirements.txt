@@ -1,0 +1,8 @@
+# Task 5: Face Detection and Recognition Requirements
+
+# Core library
+opencv-python>=4.5.0
+opencv-contrib-python>=4.5.0
+
+# For image processing
+numpy>=1.19.0
