@@ -4,10 +4,6 @@
 
 A simple conversational chatbot using pattern matching and rule-based responses.
 
-## 🎥 Demo Video
-
-Watch the chatbot in action: [View Demo](../demo_videos/task1.mp4)
-
 ## Features
 
 - **Pattern Matching**: Uses regular expressions to understand user input

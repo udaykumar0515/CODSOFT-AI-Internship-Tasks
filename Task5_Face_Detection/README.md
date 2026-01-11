@@ -4,10 +4,6 @@
 
 AI application for detecting and recognizing faces in images using Haar Cascade classifier and LBPH face recognition.
 
-## 🎥 Demo Video
-
-Watch face detection in action: [View Demo](../demo_videos/task5.mp4)
-
 ## Features
 
 - **Face Detection**: Haar Cascade classifier (pre-trained)

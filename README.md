@@ -8,36 +8,25 @@ This repository contains AI internship tasks completed as part of the **CODSOFT 
 - **Task 2**: Tic-Tac-Toe AI with unbeatable Minimax algorithm
 - **Task 5**: Face Detection and Recognition using Haar Cascade and LBPH
 
-## 🎥 Demo Videos
-
-Watch the tasks in action:
-
-- [Task 1: Rule-Based Chatbot](demo_videos/task1.mp4)
-- [Task 2: Tic-Tac-Toe AI](demo_videos/task2.mp4)
-- [Task 5: Face Detection & Recognition](demo_videos/task5.mp4)
-
 ## Task Descriptions
 
 ### Task 1: Rule-Based Chatbot
 
 A conversational AI that uses pattern matching and IF-ELSE conditions to respond to user inputs. Handles greetings, basic intents, and provides fallback responses.
 
-**Tech Stack**: Python, Regular Expressions  
-**Demo**: [Watch Demo](demo_videos/task1.mp4)
+**Tech Stack**: Python, Regular Expressions
 
 ### Task 2: Tic-Tac-Toe AI
 
 A console-based Tic-Tac-Toe game where human players compete against an unbeatable AI opponent using the Minimax algorithm with Alpha-Beta pruning optimization.
 
-**Tech Stack**: Python, Minimax Algorithm  
-**Demo**: [Watch Demo](demo_videos/task2.mp4)
+**Tech Stack**: Python, Minimax Algorithm
 
 ### Task 5: Face Detection and Recognition
 
 An AI application that detects and recognizes faces in images using Haar Cascade classifiers and LBPH (Local Binary Patterns Histograms) face recognition.
 
-**Tech Stack**: Python, OpenCV, Computer Vision  
-**Demo**: [Watch Demo](demo_videos/task5.mp4)
+**Tech Stack**: Python, OpenCV, Computer Vision
 
 ## How to Run Each Task
 
@@ -77,10 +66,6 @@ Each task has its own `requirements.txt` file with specific dependencies:
 CODSOFT-AI-Internship-Tasks/
 ├── README.md
 ├── .gitignore
-├── demo_videos/
-│   ├── task1.mp4
-│   ├── task2.mp4
-│   └── task5.mp4
 ├── Task1_Rule_Based_Chatbot/
 │   ├── main.py
 │   ├── chatbot_logic.py

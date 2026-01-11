@@ -4,10 +4,6 @@
 
 An unbeatable Tic-Tac-Toe AI using the Minimax algorithm with Alpha-Beta pruning optimization.
 
-## 🎥 Demo Video
-
-Watch the AI in action: [View Demo](../demo_videos/task2.mp4)
-
 ## Features
 
 - **Unbeatable AI**: Never loses - plays perfect moves

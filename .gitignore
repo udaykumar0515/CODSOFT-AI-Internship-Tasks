@@ -37,6 +37,9 @@ dist/
 .DS_Store
 Thumbs.db
 
+# Demo Videos
+demo_videos/
+
 # Task-specific
 Task3_Image_Captioning/output.txt
 Task3_Image_Captioning/captions_output.txt
