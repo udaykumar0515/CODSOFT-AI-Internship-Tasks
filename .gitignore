@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# PyTorch
+*.pth
+*.pt
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Task-specific
+Task3_Image_Captioning/output.txt
+Task3_Image_Captioning/captions_output.txt
+Task5_Face_Detection/detected_faces/

@@ -1,100 +1,117 @@
-# CODSOFT-AI-Internship-Tasks
+# CODSOFT AI Internship Tasks
 
 ## Project Overview
 
-This repository contains three AI internship tasks completed as part of the CODSOFT AI Internship program. Each task demonstrates different AI concepts and implementation approaches:
+This repository contains AI internship tasks completed as part of the **CODSOFT AI Internship program**. Each task demonstrates different AI concepts and implementation approaches:
 
-- **Task 1**: Rule-based chatbot using pattern matching
+- **Task 1**: Rule-Based Chatbot using pattern matching
 - **Task 2**: Tic-Tac-Toe AI with unbeatable Minimax algorithm
-- **Task 3**: Image Captioning using pretrained CNN + RNN/Transformer
+- **Task 5**: Face Detection and Recognition using Haar Cascade and LBPH
+
+## 🎥 Demo Videos
+
+Watch the tasks in action:
+
+- [Task 1: Rule-Based Chatbot](demo_videos/task1.mp4)
+- [Task 2: Tic-Tac-Toe AI](demo_videos/task2.mp4)
+- [Task 5: Face Detection & Recognition](demo_videos/task5.mp4)
 
 ## Task Descriptions
 
 ### Task 1: Rule-Based Chatbot
-A simple conversational AI that uses IF-ELSE conditions and pattern matching to respond to user inputs. Handles greetings, basic intents, and provides fallback responses.
+
+A conversational AI that uses pattern matching and IF-ELSE conditions to respond to user inputs. Handles greetings, basic intents, and provides fallback responses.
+
+**Tech Stack**: Python, Regular Expressions  
+**Demo**: [Watch Demo](demo_videos/task1.mp4)
 
 ### Task 2: Tic-Tac-Toe AI
-A console-based Tic-Tac-Toe game where human players compete against an unbeatable AI opponent using the Minimax algorithm (with optional Alpha-Beta pruning).
 
-### Task 3: Image Captioning
-An image captioning system that uses pretrained CNN models (VGG/ResNet) for feature extraction and RNN/LSTM or Transformer decoders to generate descriptive captions for images.
+A console-based Tic-Tac-Toe game where human players compete against an unbeatable AI opponent using the Minimax algorithm with Alpha-Beta pruning optimization.
+
+**Tech Stack**: Python, Minimax Algorithm  
+**Demo**: [Watch Demo](demo_videos/task2.mp4)
+
+### Task 5: Face Detection and Recognition
+
+An AI application that detects and recognizes faces in images using Haar Cascade classifiers and LBPH (Local Binary Patterns Histograms) face recognition.
+
+**Tech Stack**: Python, OpenCV, Computer Vision  
+**Demo**: [Watch Demo](demo_videos/task5.mp4)
 
 ## How to Run Each Task
 
 ### Task 1: Rule-Based Chatbot
+
 ```bash
 cd Task1_Rule_Based_Chatbot
-pip install -r requirements.txt
 python main.py
 ```
 
 ### Task 2: Tic-Tac-Toe AI
+
 ```bash
 cd Task2_TicTacToe_AI
-pip install -r requirements.txt
 python main.py
 ```
 
-### Task 3: Image Captioning
+### Task 5: Face Detection and Recognition
+
 ```bash
-cd Task3_Image_Captioning
+cd Task5_Face_Detection
 pip install -r requirements.txt
-# For inference
-python inference.py
-# For training (optional)
-jupyter notebook training.ipynb
+python main.py
 ```
 
 ## Dependencies
 
 Each task has its own `requirements.txt` file with specific dependencies:
 
-- **Task 1**: Basic Python libraries (re, random)
-- **Task 2**: No external dependencies required
-- **Task 3**: torch, torchvision, PIL, numpy, matplotlib
-
-## Screenshots
-
-*Screenshots will be added here as they become available*
-
-## Demo Instructions
-
-1. **Chatbot Demo**: Start the chatbot and try different conversation patterns
-2. **Tic-Tac-Toe Demo**: Play against the AI to experience unbeatable gameplay
-3. **Image Captioning Demo**: Upload images to see generated captions
+- **Task 1**: Python standard library only (re, random)
+- **Task 2**: Python standard library only
+- **Task 5**: opencv-python, opencv-contrib-python, numpy
 
 ## Repository Structure
 
 ```
 CODSOFT-AI-Internship-Tasks/
 ├── README.md
+├── .gitignore
+├── demo_videos/
+│   ├── task1.mp4
+│   ├── task2.mp4
+│   └── task5.mp4
 ├── Task1_Rule_Based_Chatbot/
 │   ├── main.py
 │   ├── chatbot_logic.py
 │   ├── examples.txt
-│   ├── requirements.txt
 │   └── README.md
 ├── Task2_TicTacToe_AI/
 │   ├── main.py
 │   ├── minimax.py
 │   ├── game_logic.py
-│   ├── requirements.txt
 │   └── README.md
-├── Task3_Image_Captioning/
-│   ├── main.py
-│   ├── inference.py
-│   ├── model.py
-│   ├── training.ipynb
-│   ├── requirements.txt
-│   ├── README.md
-│   └── sample_images/
-└── assets/
-    └── screenshots/
+└── Task5_Face_Detection/
+    ├── main.py
+    ├── face_detector.py
+    ├── face_recognizer.py
+    ├── requirements.txt
+    ├── README.md
+    └── sample_images/
 ```
+
+## Skills Demonstrated
+
+- ✅ Pattern Matching & Rule-Based Systems
+- ✅ Game Tree Algorithms (Minimax, Alpha-Beta Pruning)
+- ✅ Computer Vision (Face Detection)
+- ✅ Machine Learning (Face Recognition)
+- ✅ Python Programming
+- ✅ OpenCV Library
 
 ## Author
 
-CODSOFT AI Internship Program
+**CODSOFT AI Internship Program**
 
 ## License
 
