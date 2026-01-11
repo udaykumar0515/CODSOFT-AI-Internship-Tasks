@@ -1,114 +1,88 @@
-#!/usr/bin/env python3
 """
-Image Captioning Main Script - Task 3
+Image Captioning Demo - Task 3
 CODSOFT AI Internship
 
-Main entry point for image captioning system.
+Simple demo that combines:
+- CNN (ResNet50) for image feature extraction
+- LSTM for caption generation
 """
 
 import os
-import sys
-from inference import ImageCaptioningInference
+from inference import ImageCaptioner
 
 
 def main():
     """Main function for image captioning demo"""
     print("=" * 60)
-    print("🖼️  IMAGE CAPTIONING - CODSOFT AI INTERNSHIP")
+    print("IMAGE CAPTIONING - CODSOFT AI INTERNSHIP - TASK 3")
     print("=" * 60)
     print("\nWelcome to the Image Captioning System!")
-    print("This system uses CNN + RNN/Transformer to generate captions for images.")
-    print("\nFeatures:")
-    print("- CNN encoder (ResNet50) for feature extraction")
-    print("- RNN (LSTM) or Transformer decoder for caption generation")
-    print("- Support for single image or batch processing")
-    print("- Preprocessing with ImageNet normalization")
-    print("\n" + "=" * 60)
+    print("Using: ResNet50 (CNN) + LSTM (RNN) for caption generation")
+    print("=" * 60)
     
-    # Initialize the model
-    print("\n🤖 Initializing Image Captioning Model...")
-    print("Note: Using random weights (no pretrained model available)")
-    print("In a real scenario, you would load a trained model.")
-    
+    # Initialize the captioner
+    print("\nInitializing model...")
     try:
-        inference = ImageCaptioningInference(
-            model_path=None,  # No pretrained model for demo
-            decoder_type='lstm'  # Can be 'lstm' or 'transformer'
-        )
-        print("✅ Model initialized successfully!")
+        captioner = ImageCaptioner()
+        print("Model ready!")
     except Exception as e:
-        print(f"❌ Error initializing model: {e}")
+        print(f"Error initializing model: {e}")
         return
     
     # Check for sample images
     sample_dir = "sample_images"
     if not os.path.exists(sample_dir):
-        print(f"\n📁 Creating sample images directory: {sample_dir}")
         os.makedirs(sample_dir, exist_ok=True)
-        print(f"Please add some sample images to the '{sample_dir}' directory")
-        print("Supported formats: .jpg, .jpeg, .png, .bmp, .tiff")
+        print(f"\nPlease add sample images to '{sample_dir}' directory")
         return
     
     # Get sample images
-    image_extensions = ['.jpg', '.jpeg', '.png', '.bmp', '.tiff']
-    sample_images = []
-    
+    image_files = []
     for filename in os.listdir(sample_dir):
-        if any(filename.lower().endswith(ext) for ext in image_extensions):
-            sample_images.append(os.path.join(sample_dir, filename))
+        if filename.lower().endswith(('.jpg', '.jpeg', '.png', '.bmp')):
+            image_files.append(os.path.join(sample_dir, filename))
     
-    if not sample_images:
-        print(f"\n⚠️  No sample images found in '{sample_dir}' directory")
-        print("Please add some images to test the captioning system.")
+    if not image_files:
+        print(f"\nNo images found in '{sample_dir}'")
+        print("Please add some .jpg, .png, or .bmp images to test")
         return
     
-    print(f"\n📸 Found {len(sample_images)} sample images:")
-    for i, img_path in enumerate(sample_images, 1):
-        print(f"  {i}. {os.path.basename(img_path)}")
+    print(f"\nFound {len(image_files)} images:")
+    for i, img in enumerate(image_files, 1):
+        print(f"  {i}. {os.path.basename(img)}")
     
-    # Process images
-    print("\n🔄 Generating captions...")
+    # Generate captions
+    print("\nGenerating captions...")
     print("-" * 60)
     
     try:
-        captions = inference.generate_batch_captions(sample_images, max_length=15)
+        captions = captioner.caption_multiple(image_files)
         
-        print("\n" + "=" * 60)
-        print("🎯 GENERATED CAPTIONS")
+        print("\nGENERATED CAPTIONS:")
         print("=" * 60)
+        for img_path, caption in zip(image_files, captions):
+            print(f"\n{os.path.basename(img_path)}:")
+            print(f"  -> {caption}")
         
-        for img_path, caption in zip(sample_images, captions):
-            img_name = os.path.basename(img_path)
-            print(f"📷 {img_name}")
-            print(f"💬 {caption}")
-            print("-" * 40)
-        
-        print("\n✅ Caption generation completed!")
-        
-        # Save captions to file
-        output_file = "generated_captions.txt"
+        # Save results
+        output_file = "captions_output.txt"
         with open(output_file, 'w') as f:
             f.write("Image Captioning Results\n")
             f.write("=" * 40 + "\n\n")
-            for img_path, caption in zip(sample_images, captions):
+            for img_path, caption in zip(image_files, captions):
                 f.write(f"{os.path.basename(img_path)}: {caption}\n")
         
-        print(f"📄 Captions saved to: {output_file}")
+        print(f"\n{'-' * 60}")
+        print(f"Results saved to: {output_file}")
+        print("=" * 60)
+        print("\nDone! The captions are generated using:")
+        print("  - ResNet50 (pre-trained CNN) for image features")
+        print("  - LSTM (RNN) for caption generation")
+        print("\nNote: Model uses random weights for demonstration.")
+        print("For better results, train on datasets like Flickr8k or COCO.")
         
     except Exception as e:
-        print(f"❌ Error generating captions: {e}")
-    
-    print("\n" + "=" * 60)
-    print("🎉 Image Captioning Demo Complete!")
-    print("=" * 60)
-    print("\nTo use the system with your own images:")
-    print("1. Place images in the 'sample_images' directory")
-    print("2. Run: python main.py")
-    print("\nFor advanced usage:")
-    print("python inference.py --image path/to/image.jpg")
-    print("python inference.py --image_dir path/to/images/")
-    print("\nNote: This demo uses random weights. For real applications,")
-    print("train the model on a dataset like Flickr8k or COCO Captions.")
+        print(f"Error generating captions: {e}")
 
 
 if __name__ == "__main__":
